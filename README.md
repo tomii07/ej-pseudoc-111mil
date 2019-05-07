@@ -1,1 +1,1 @@
-1. <Ej1 Clase.psc> 
+1. Ej1 Clase.psc
