@@ -23,3 +23,4 @@
 23. [Ej23 celcius_fahrenheit.psc](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej23%20celcius_fahrenheit.psc)
 24. [Ej24 dec_bin.psc](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej24%20dec_bin.psc)
 25. [Ej25 anio_bisiesto](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej25%20anio_bisiesto.psc)
+26. [Ej26 esPrimo](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej26%20esPrimo.psc)
