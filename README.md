@@ -20,3 +20,6 @@
 20. [Ej20 funciones.psc](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej20%20funciones.psc)
 21. [Ej21 esMayor(Funcion).psc](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej21%20esMayor(Funcion).psc)
 22. [Ej22 adivina.psc](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej22%20adivina.psc)
+23. [Ej23 https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej23%20celcius_fahrenheit.psc]
+24. [Ej24 https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej24%20dec_bin.psc]
+25. [Ej25 https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej25%20anio_bisiesto.psc]
