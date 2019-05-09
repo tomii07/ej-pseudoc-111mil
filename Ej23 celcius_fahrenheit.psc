@@ -19,27 +19,41 @@ FinProceso
 
 Funcion conver_CaF
 	
-	Definir c,f Como Real;
+	Definir c Como Real;
 	
 	Escribir "Ingrese la temperatura en celcius que desea convertir: ";
 	Leer c;
 	
-	f <- (c * 9 / 5) + 32;
-	
-	Escribir c, " °C ---> ",f, " °F";
+	Escribir c, " °C ---> ", conversion_1(c), " °F";
 	
 FinFuncion
 
 funcion conver_FaC
 	
-	Definir c,f Como Real;
+	Definir f Como Real;
 	
 	Escribir "Ingrese la temperatura en fahrenheits que desea convertir: ";
 	Leer f;
 	
-	c <- (f - 32) * 5/9;
+	Escribir f, " °F ---> ", conversion_2(f), " °C";
 	
-	Escribir f, " °F ---> ",c, " °C";
+FinFuncion
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+Funcion f <- conversion_1(c)
+	
+	Definir f Como Real;
+	
+	f <- (c * 9 / 5) + 32;
+	
+FinFuncion
+
+Funcion c <- conversion_2(f)
+	
+	Definir c Como Real;
+	
+	c <- (f - 32) * 5/9;
 	
 FinFuncion
 	
