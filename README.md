@@ -1,3 +1,5 @@
+-------------------------------------------🕵️$INDICE$🕵️-------------------------------------------
+
 1. [Ej1 Clase](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej1%20Clase.psc)
 2. [Ej2 Clase](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej2%20Clase.psc)
 3. [Ej3 Clase](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej3%20Clase.psc)
@@ -24,3 +26,4 @@
 24. [Ej24 dec_bin](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej24%20dec_bin.psc)
 25. [Ej25 anio_bisiesto](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej25%20anio_bisiesto.psc)
 26. [Ej26 esPrimo](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej26%20esPrimo.psc)
+26. $* [Ej26 esPrimo_2](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej26%20esPrimo_2.psc) MEJORADO/CORREGIDO *$
