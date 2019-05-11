@@ -2,41 +2,49 @@ Proceso esPrimo
 	
 	Definir p Como Entero;
 	
-	Escribir "Ingrese un numero para ver si es primo o no: ";
+	Escribir "Ingrese un numero: ";
 	Leer p;
 	
-	
-	Si primo(p) Entonces 
-		Escribir "El numero ",p," es PRIMO";
-	SiNo 
-		Escribir "El numero ",p," NO es PRIMO";
+	Si primo(p) Entonces
+		//es <- verdadero
+		Escribir "Es primo";
+	SiNo
+		//es <- falso
+		Escribir "No es primo";
 	FinSi
+
 	
 FinProceso
 
 Funcion es <- primo(p)
 	
 	Definir es Como Logico;
-	Definir i, j Como Entero;
+	Definir rtado Como Real;
 	
-    i <- 0;
-    j <- 1;
+	Si p < 0 Entonces
+		p <- p * (-1);
+	FinSi
 	
-	Mientras j <= p Hacer        
-		
-        Si p % j = 0 Entonces
-            i <- i + 1;
-        FinSi
-		
-        j <- j + 1;   
-		
-    FinMientras
+	rtado <- rc(p);
 	
-	Si i = 2 Entonces
-        es <- Verdadero;
-    Sino
-		es <- Falso;
-    FinSi    
+	rtado <- trunc(rtado);
 	
+	Si p = 0 O p = 1 Entonces 
+		Es <- Falso;
+	SiNo
+		Si p = 2 O p = 3 Entonces
+			es <- Verdadero;
+		SiNo
+			Repetir
+				Si (p % rtado) = 0 Entonces
+					es <- Falso;
+				SiNo
+					es <- Verdadero;
+				FinSi
+				rtado <- rtado - 1;
+			Hasta Que (p + 1) % rtado  = 0
+		FinSi
+	FinSi
+
 FinFuncion
 	
