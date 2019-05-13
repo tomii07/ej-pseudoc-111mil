@@ -2,20 +2,30 @@ Proceso celcius_fahrenheit
 	
 	Definir nro como entero;
 	
-	Escribir "Elija la opcion de conversion...";
+	Mientras 2 = 2 Hacer
 	
-	Escribir "1. De Celcius a Fahrenheit";
-	Escribir "2. De Fahrenheit a Celcius";
+		Escribir "Elija la opcion de conversion...";
 	
-	Leer nro;
+		Escribir "1. De Celcius a Fahrenheit";
+		Escribir "2. De Fahrenheit a Celcius";
+		
+		Leer nro;
+		
+		Si nro = 1 Entonces
+			conver_CaF;
+		SiNo
+			conver_FaC;
+		FinSi
+		
+		Escribir "Presione una tecla para continuar...";
+		Esperar  Tecla;
+		Limpiar Pantalla;
+		
+	FinMientras
 	
-	Si nro = 1 Entonces
-		conver_CaF;
-	SiNo
-		conver_FaC;
-	FinSi
-
 FinProceso
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 Funcion conver_CaF
 	
@@ -36,7 +46,7 @@ funcion conver_FaC
 	Leer f;
 	
 	Escribir f, " °F ---> ", conversion_2(f), " °C";
-	
+
 FinFuncion
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//	
