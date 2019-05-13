@@ -1,4 +1,4 @@
--------------------------------------------🕵️$INDICE$🕵️-------------------------------------------
+-------------------------------------------🕵️ INDICE 🕵️-------------------------------------------
 
 1. [Ej1 Clase](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej1%20Clase.psc)
 2. [Ej2 Clase](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej2%20Clase.psc)
