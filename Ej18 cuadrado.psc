@@ -24,7 +24,7 @@ Proceso cuadrado
 			//Quiero que el valor de b se me resetee
 			b <- aux;
 			Repetir
-				Escribir Sin Saltar shape;
+				Escribir Sin Saltar " ",shape;
 				b <- b - 1;
 			Hasta Que b = 0;
 			Escribir "";
