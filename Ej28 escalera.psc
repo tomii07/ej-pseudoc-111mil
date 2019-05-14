@@ -1,18 +1,27 @@
 Proceso escalera
 	
-	Definir piso,i,aux como Entero;
-	Definir escalon Como Caracter;
+	Definir piso Como Entero;
 	
 	Escribir "Ingrese la cantidad de pisos";
 	Leer piso;
 	
 	Escribir "";
 	
+	stair_construct(piso);
+	
+FinProceso
+
+// Funcion que arma la escalera:
+Funcion stair_construct(piso)
+	
+	Definir i,aux como Entero;
+	Definir escalon Como Caracter;
+	
 	aux <- piso;
 	piso <- piso + 1;
 	escalon <- '\| [#] |_';
 	
-	i <- 0; //Me indica en el piso que estoy
+	i <- 0; //Indicador de piso
 	
 	Mientras piso <> i Hacer
 		Si i = 0 Entonces
@@ -32,7 +41,7 @@ Proceso escalera
 		
 	FinMientras
 	
-FinProceso
+FinFuncion
 
 // Funcion que me marca los espacios entre cada piso:
 Funcion p <- escalones(i)
