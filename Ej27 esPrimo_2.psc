@@ -6,7 +6,7 @@ Proceso esPrimo_2
 	Leer p;
 	
 	Si p < 0 Entonces
-		p <- p * (-1);
+		p <- abs(p);
 	FinSi
 	
 	Si primo(p) Entonces
@@ -46,10 +46,17 @@ Funcion b <- num(p)
 	//Divido al numero ingresado por todos los numeros positivos anteriores a dicho numero
 	
 	Repetir
+		
 		Si p % i = 0 Entonces
 			b <- b + 1;
 		FinSi
+
+		Si b > 2 Entonces
+			i <- 1;
+		FinSi
+		
 		i <- i - 1;
+		
 	Hasta Que i = 0;
 	
 FinFuncion
