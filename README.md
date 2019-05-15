@@ -26,4 +26,8 @@
 24. [Ej24 dec_bin](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej24%20dec_bin.psc)
 25. [Ej25 anio_bisiesto](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej25%20anio_bisiesto.psc)
 26. [Ej26 esPrimo](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej26%20esPrimo.psc)
-26. [Ej27 esPrimo_2](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej26%20esPrimo_2.psc) $* MEJORADO/CORREGIDO *$
+27. [Ej27 esPrimo_2](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej26%20esPrimo_2.psc) $* MEJORADO/CORREGIDO *$
+28. [Ej28 escalera](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej28%20escalera.psc)
+29. [Ej29 circulo](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej29%20circulo.psc)
+
+
