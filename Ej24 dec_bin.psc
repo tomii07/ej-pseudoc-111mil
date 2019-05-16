@@ -1,39 +1,37 @@
 Proceso dec_bin
 	
-	Definir dec Como Entero;
+	Definir dec Como Real;
 	
-	Escribir "Ingrese un numero para pasarlo a binario: ";
+	Escribir "Ingrese un numero para convertilo a binario: ";
 	Leer dec;
 	
-	conversor(dec);
+	Escribir conversion(dec);
 	
 FinProceso
 
-Funcion conversor(dec)
+Funcion nro <- conversion(dec)
 	
-	Definir bin,r,i Como Entero;
+	Definir bin,aux,j,i Como Entero;
+	Definir nro Como Caracter;
 	
-	bin <- 0;
-	i <- 0;
+	nro <- "";
 	
-	Si dec = 1 Entonces
-		Escribir "1";
+	Si dec = 0 Entonces
+		Escribir '0';
+	SiNo
+		Mientras dec > 0 Hacer
+			bin <- dec % 2;
+			
+			Si bin = 1 Entonces
+				nro <- Concatenar('1',nro);
+			SiNo
+				nro <- Concatenar('0',nro);
+			FinSi
+			
+			dec <- dec / 2;
+			dec <- trunc(dec);
+			
+		FinMientras
 	FinSi
-	
-	Repetir
-		
-		r <- dec % 2;
-		bin <- bin + (10 ^ i) * r;
-		
-		i <- i + 1;
-		
-		dec <- trunc(dec/2);
 
-	Hasta Que dec = 1 
-	
-	bin <- bin + (10 ^ i);
-	
-	Escribir bin;
-	
 FinFuncion
-	
