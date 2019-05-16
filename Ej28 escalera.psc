@@ -3,8 +3,8 @@ Proceso escalera
 	
 	Mientras 1 = 1 Hacer	
 		
-		Escribir 'Ingrese la cantidad de pisos';
 		Leer piso;
+		Escribir 'Ingrese la cantidad de pisos';
 		Escribir '';
 		
 		stair_construct(piso);
