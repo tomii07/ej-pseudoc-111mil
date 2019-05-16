@@ -1,9 +1,17 @@
 Proceso escalera
 	Definir piso Como Entero;
-	Escribir 'Ingrese la cantidad de pisos';
-	Leer piso;
-	Escribir '';
-	stair_construct(piso);
+	
+	Mientras 1 = 1 Hacer	
+		
+		Escribir 'Ingrese la cantidad de pisos';
+		Leer piso;
+		Escribir '';
+		
+		stair_construct(piso);
+		Esperar Tecla;
+		Limpiar Pantalla;
+	FinMientras
+
 FinProceso
 
 // Funcion que arma la escalera:
