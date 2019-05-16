@@ -5,7 +5,11 @@ Proceso dec_bin
 	Escribir "Ingrese un numero para convertilo a binario: ";
 	Leer dec;
 	
-	Escribir conversion(dec);
+	Si dec = 0 Entonces
+		Escribir '0';
+	SiNo
+		Escribir conversion(dec);
+	FinSi
 	
 FinProceso
 
@@ -15,23 +19,19 @@ Funcion nro <- conversion(dec)
 	Definir nro Como Caracter;
 	
 	nro <- "";
+
+	Mientras dec > 0 Hacer
+		bin <- dec % 2;
+		
+		Si bin = 1 Entonces
+			nro <- Concatenar('1',nro);
+		SiNo
+			nro <- Concatenar('0',nro);
+		FinSi
+			
+		dec <- dec / 2;
+		dec <- trunc(dec);
 	
-	Si dec = 0 Entonces
-		Escribir '0';
-	SiNo
-		Mientras dec > 0 Hacer
-			bin <- dec % 2;
-			
-			Si bin = 1 Entonces
-				nro <- Concatenar('1',nro);
-			SiNo
-				nro <- Concatenar('0',nro);
-			FinSi
-			
-			dec <- dec / 2;
-			dec <- trunc(dec);
-			
-		FinMientras
-	FinSi
+	FinMientras
 
 FinFuncion
