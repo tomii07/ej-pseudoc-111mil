@@ -5,7 +5,8 @@ Proceso piedra_papel_tijera
 	
 	simpl <- 'simple';
 	
-	Escribir "Ingrese ",simpl, " o un numero para jugar al mejor de... ";
+	Escribir "Ingrese :",simpl,", para jugar una partida";
+	Escribir "Ingrese un numero para jugar el mejor de... ";
 	Leer game;
 	
 	Si game = simpl Entonces
@@ -20,8 +21,9 @@ Proceso piedra_papel_tijera
 		
 	SiNo
 		i <- ConvertirANumero(game); 
+		Escribir "PARTIDA AL MEJOR DE ",game;
+		
 		Repetir 
-			Escribir "PARTIDA AL MEJOR DE ",game;
 			Escribir "Turno ",i;
 			Escribir "Tu eleccion? [piedra ; papel ; tijera]: ";
 			Leer us;
