@@ -62,8 +62,4 @@ Funcion cpuGame <- cpu
 		cpuGame <- 'tijera';
 	FinSi
 FinFuncion
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-Funcion error
-	Escribir "Opcion ingresada incorrecta, vuelva a intentarlo...";
-FinFuncion
 	
