@@ -63,7 +63,7 @@ Funcion cpuGame <- cpu
 	FinSi
 	Si rand = 1 Entonces
 		cpuGame <- 'papel';
-	FinSi
+	FinSi	
 	Si rand = 2 Entonces
 		cpuGame <- 'tijera';
 	FinSi
