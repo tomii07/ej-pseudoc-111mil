@@ -30,3 +30,10 @@
 28. [Ej28 escalera](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej28%20escalera.psc)
 29. [Ej29 piedra_papel_tijera](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej29%20piedra_papel_tijera.psc)
 30. [Ej30 promedio](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej30%20promedio.psc)
+31. [Ej31 buscar](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej31%20buscar.psc)
+32. [Ej32 contiene](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej32%20contiene.psc)
+33. [Ej33 invertir](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej33%20invertir.psc)
+34. [Ej34 ordenar](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej34%20ordenar.psc)
+35. [Ej35 sumatoria](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej35%20sumatoria.psc)
+36. [Ej36 inicializar](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej36%20inicializar.psc)
+
