@@ -1,7 +1,7 @@
 Proceso piedra_papel_tijera
 	Definir game,simpl como caracter;
     simpl <- 'simple';
-	Escribir "1. Ingrese :",simpl,", para jugar una partida";
+	Escribir "1. Ingrese: ",simpl,", para jugar una partida";
 	Escribir "2. Ingrese un numero para jugar el mejor de... ";
 	Leer game;
 	Si game = simpl Entonces
@@ -18,7 +18,6 @@ Funcion simple_match
 	Leer jugador;
 	jugador2 <- cpu; //FUNCION
 	Escribir "Mi eleccion ",jugador2;
-	Escribir resultado(jugador,jugador2);
 	Escribir jugar(jugador,jugador2);
 FinFuncion
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -33,8 +32,8 @@ Funcion turns_match(game)
 		Leer jugador;
 		jugador2 <- cpu; //FUNCION
 		Escribir "Mi eleccion: ",jugador2;
-		Escribir resultado(jugador,jugador2);
 		Escribir jugar(jugador,jugador2);
+		Escribir "";
 		i <- i - 1; 
 	Hasta Que i = 0
 FinFuncion
@@ -45,6 +44,7 @@ Funcion x <- jugar(jugador,jugador2)
 		x <- 'EMPATE!';
 	FinSi
 	Si jugador <> jugador2 Entonces
+		Escribir resultado(jugador,jugador2);
 		//Recorro las posibilidades en las que el usuario gana...
 		Si (jugador = 'piedra' Y jugador2 = 'tijera') O (jugador = 'tijera' Y jugador2 = 'papel') O (jugador = 'papel' Y jugador2 = 'piedra') Entonces
 			x <- 'Tu ganas...';
