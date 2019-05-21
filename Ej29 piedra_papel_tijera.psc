@@ -4,34 +4,39 @@ Proceso piedra_papel_tijera
 	Escribir "1. Ingrese :",simpl,", para jugar una partida";
 	Escribir "2. Ingrese un numero para jugar el mejor de... ";
 	Leer game;
-	juego(simpl,game);
+	Si game = simpl Entonces
+		simple_match;
+	SiNo
+		turns_match(game);
+	FinSi
 FinProceso
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-Funcion juego(simpl,game)
-	Definir i Como Entero;
+Funcion simple_match
 	Definir jugador,jugador2 Como Caracter;
-	Si game = simpl Entonces
-		Escribir "PARTIDA SIMPLE!";
+	Escribir "PARTIDA SIMPLE!";
+	Escribir "Tu eleccion? [piedra ; papel ; tijera]: ";
+	Leer jugador;
+	jugador2 <- cpu; //FUNCION
+	Escribir "Mi eleccion ",jugador2;
+	Escribir resultado(jugador,jugador2);
+	Escribir jugar(jugador,jugador2);
+FinFuncion
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+Funcion turns_match(game)
+	Definir i Como Entero;	
+	Definir jugador,jugador2 Como Caracter;
+	i <- ConvertirANumero(game); 
+	Escribir "PARTIDA AL MEJOR DE ",game;
+	Repetir 
+		Escribir "Turno ",i;
 		Escribir "Tu eleccion? [piedra ; papel ; tijera]: ";
 		Leer jugador;
 		jugador2 <- cpu; //FUNCION
-		Escribir "Mi eleccion ",jugador2;
+		Escribir "Mi eleccion: ",jugador2;
 		Escribir resultado(jugador,jugador2);
 		Escribir jugar(jugador,jugador2);
-	SiNo
-		i <- ConvertirANumero(game); 
-		Escribir "PARTIDA AL MEJOR DE ",game;
-		Repetir 
-			Escribir "Turno ",i;
-			Escribir "Tu eleccion? [piedra ; papel ; tijera]: ";
-			Leer jugador;
-			jugador2 <- cpu; //FUNCION
-			Escribir "Mi eleccion: ",jugador2;
-			Escribir resultado(jugador,jugador2);
-			Escribir jugar(jugador,jugador2);
-			i <- i - 1; 
-		Hasta Que i = 0
-	FinSi
+		i <- i - 1; 
+	Hasta Que i = 0
 FinFuncion
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 Funcion x <- jugar(jugador,jugador2)
@@ -56,11 +61,9 @@ Funcion cpuGame <- cpu
 	Si rand = 0 Entonces
 		cpuGame <- 'piedra';
 	FinSi
-	
 	Si rand = 1 Entonces
 		cpuGame <- 'papel';
 	FinSi
-	
 	Si rand = 2 Entonces
 		cpuGame <- 'tijera';
 	FinSi
