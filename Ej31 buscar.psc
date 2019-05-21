@@ -30,7 +30,7 @@ FinFuncion
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 Funcion pos <- buscarEnLista(lista)
 	Definir x Como Caracter;
-	Definir i,j,pos Como Entero;
+	Definir j,pos Como Entero;
 	j <- 0;
 	Escribir "Ingrese un elemento a buscar en su lista: ";
 	Leer x;
