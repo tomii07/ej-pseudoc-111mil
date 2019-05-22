@@ -6,7 +6,12 @@ Proceso buscar
 	cargar_lista(lista,i);
 	mostrar(lista,i);
 	posval <- buscarEnLista(lista);
-	Escribir "El elemento buscado se encuentra en la posicion ",posval;
+	Si posval < 0 Entonces
+		Escribir "El elemento buscado no esta en la lista...";
+	SiNo
+		Escribir "El elemento buscado se encuentra en la posicion ",posval;
+	FinSi
+
 FinProceso
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 Funcion cargar_lista(lista,i)
@@ -36,8 +41,10 @@ Funcion pos <- buscarEnLista(lista)
 	Repetir
 		Si x = lista[j] Entonces
 			pos <- j;
+		SiNo
+			pos <- -1;
 		FinSi
 		j <- j + 1;
-	Hasta Que j = 5
+	Hasta Que j = 5 O x = lista[j - 1]
 FinFuncion
 	
