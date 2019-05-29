@@ -36,4 +36,7 @@
 34. [Ej34 ordenar](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej34%20ordenar.psc)
 35. [Ej35 sumatoria](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej35%20sumatoria.psc)
 36. [Ej36 inicializar](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej36%20inicializar.psc)
+37. [Ej37 circulo](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej37%20circulo.psc)
+38. [Ej38 cajero_automatico](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej38%20%20cajero_automatico.psc)
+39. [Ej39 recursividad](https://github.com/tomii07/ej-pseudoc-111mil/blob/master/Ej39%20recursividad.psc)
 
