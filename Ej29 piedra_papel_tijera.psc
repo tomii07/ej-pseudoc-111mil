@@ -35,11 +35,15 @@ Funcion simple_match
 	Escribir "";
 	Escribir "Tu eleccion: ",jugador;
 	Escribir "Mi eleccion ",jugador2;
-	Si jugar(jugador,jugador2) Entonces
-		Escribir "YO GANO!!";
-	SiNo
-		Escribir "Tu ganas...";
-	FinSi
+        Si jugador = jugador2 Entonces
+                Escribir "EMPATE!!";
+        SiNo
+	        Si jugar(jugador,jugador2) Entonces
+		     Escribir "YO GANO!!";
+	        SiNo
+		     Escribir "Tu ganas...";
+	        FinSi
+        FinSi
 	cls;
 FinFuncion
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
