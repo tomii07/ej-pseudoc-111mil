@@ -1,4 +1,5 @@
 Proceso Clase
+	Definir a Como Entero;
 	Escribir "Ingrese un numero";
 	Leer a;
 	Si a > 0 Entonces
@@ -7,6 +8,5 @@ Proceso Clase
 		FinSi
 	SiNo
 		a <- 1;
-	FinSi
-	
+	FinSi	
 FinProceso

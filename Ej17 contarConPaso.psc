@@ -1,6 +1,6 @@
 Proceso contarConPaso
-	Definir nro Como Entero;
-	Definir a Como Entero;
+	Definir nro,a Como Entero;
+	Escribir "CONTAR CON PASO!";
 	Escribir "Ingrese un numero: ";
 	Leer nro;
 	a <- 0;

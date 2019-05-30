@@ -3,7 +3,7 @@ Proceso adivina
 	Escribir "TIENE 10 INTENTOS, SUERTE!";
 	nro_encontrado;
 FinProceso
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 Funcion nro_encontrado
 	Definir nro Como Entero;
 	Definir rand Como Entero;

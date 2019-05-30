@@ -1,4 +1,5 @@
 Proceso Hola
+	Definir a,b Como Entero;
 	Escribir "Ingrese un numero";
 	Leer a;
 	Escribir "Ingrese un numero";

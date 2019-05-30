@@ -1,14 +1,11 @@
 Proceso esPar
-	
 	Definir nro como entero;
-	
+	Escribir "ES PAR O IMPAR?";
 	Escribir "Ingrese un numero: ";
 	Leer nro;
-	
-	Si nro%2=0 Entonces
-		Escribir "El numero es par!";
+	Si nro % 2 = 0 Entonces
+		Escribir nro," es par!";
 	SiNo
-		Escribir "El numero es impar...";
+		Escribir nro," es impar...";
 	FinSi
-	
 FinProceso

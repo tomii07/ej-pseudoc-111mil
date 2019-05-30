@@ -1,22 +1,16 @@
 Proceso cuadrado
-	
 	Definir h Como Entero;
 	Definir b Como Entero;
 	Definir aux Como Entero;
 	Definir shape Como Caracter;
-	
 	Escribir "PROGRAMA DEL CUADRADO!";
 	Escribir "";
-	//Pido datos
 	Escribir "Ingrese alto: ";
 	Leer h;
 	Escribir "Ingrese ancho: ";
 	Leer b;
-	
 	aux <- b;
 	shape <- ' #';
-	
-	//Condiciones para que no sea valido
 	Si h < 1 O b < 1 Entonces
 		Escribir "Numeros Invalidos...";
 	SiNo
@@ -33,5 +27,4 @@ Proceso cuadrado
 			h <- h - 1;
 		Hasta Que h = 0;
 	FinSi
-
 FinProceso

@@ -1,5 +1,6 @@
 Proceso celcius_fahrenheit
 	Definir opc como entero;
+	Escribir "PROGRAMA DE CONVERSION °C <-> °F";
 	Repetir
 		Escribir "Elija una opcion de conversion...";
 		Escribir "1. De Celcius a Fahrenheit";

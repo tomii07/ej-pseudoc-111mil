@@ -1,7 +1,6 @@
 Proceso alternativaSimple
-	
+	Definir a,b,c,d,e,f como caracter;
 	Escribir "Para ingresar debe registrarse... ";
-	
 	//Registracion
 	Escribir "Ingrese su usuario: ";
 	Leer a;
@@ -14,9 +13,10 @@ Proceso alternativaSimple
 				Escribir "Las contraseñas no coinciden, intentelo nuevamente...";
 		SiNo
 			Escribir "Usuario registrado exitosamente!";
+			Esperar 1 Segundo;
+			Limpiar Pantalla;
 		FinSi
 	Hasta que b = c
-	
 	//Incio de sesion
 	Escribir "Ingrese su usuario: ";
 	Leer d;
@@ -26,7 +26,6 @@ Proceso alternativaSimple
 			Leer d;
 		Hasta Que a = d
 	FinSi
-		
 	Escribir "Ingrese su contraseña: ";
 	Leer f;
 	Si b != f Entonces
@@ -35,7 +34,8 @@ Proceso alternativaSimple
 			Leer f;
 		Hasta Que b = f
 	FinSi
-	
+	Esperar 1 Segundos;
+	Limpiar Pantalla;
 	Escribir "Incio de sesion exitoso! Cargando la pagina...";
-	
+	Escribir "Nah, mentira :)";
 FinProceso

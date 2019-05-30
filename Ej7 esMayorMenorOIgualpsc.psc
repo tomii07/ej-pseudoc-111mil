@@ -1,5 +1,10 @@
 Proceso esMayorMenorOIgual
-	Leer a,b;
+	Definir a,b como entero;
+	Escribir "DETERMINAR ENTRE DOS NUMEROS ES MAYOR, MENOR O IGUAL!";
+	Escribir "Ingrese el primero numero: ";
+	Leer a;
+	Escribir "Ingrese el segundo numero: ";
+	Leer b;
 	Si a = b Entonces
 		Escribir a, " es igual que ", b;
 	SiNo 
