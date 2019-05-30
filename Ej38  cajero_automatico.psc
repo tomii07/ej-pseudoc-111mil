@@ -150,6 +150,5 @@ SubProceso calculo_extraccion(monto,den_cajon,cant_cajon,rta)
 		Escribir "Hasta luego!";
 		cls(1);
 	FinSi
-	
 FinSubProceso
 
