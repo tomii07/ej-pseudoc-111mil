@@ -1,9 +1,11 @@
 Proceso cajero_automatico
+	Escribir "BIENVENIDOS AL PROGRAMA DEL CAJERO AUTOMATICO!";
+	cls(1);
 	extraccion;
 FinProceso
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 SubProceso extraccion
-	Definir monto,cant_cajon,den_cajon,i,j,val1,val2,val3,aux Como Entero;
+	Definir monto,cant_cajon,den_cajon,i Como Entero;
 	Definir rta Como Caracter;
 	Dimension cant_cajon[5];
 	Dimension den_cajon[5];
@@ -17,84 +19,19 @@ SubProceso extraccion
 		cant_cajon[i] <- cant_billetes;
 		i <- i + 1;
 	Hasta Que i = 5 
-	val1 <- 0;
-	val2 <- 0;
-	val3 <- 0;
 	Escribir "Ingrese el monto a retirar: $";
 	Leer monto;
-	cls;
+	cls(1);
 	Escribir "Monto a retirar: $",monto;
 	Escribir "Esta seguro que desea proceder?[S/N]";
 	Leer rta;
-	cls;
-	
+	cls(1);
 	
 	//INCOMPLETO:
 	//FALTA RESTAR LA CANTIDAD DE BILLETES ENTREGADOS AL USUARIO A CADA CAJON!!
 	//FALTA INDICAR CUANDO EL USUARIO INGRESA UN MONTO NO DIVISIBLE POR 500 100 50
 	
-	
-	Si rta = 'n' o rta = 'N' Entonces
-		extraccion;
-	SiNo
-		//--------------------//
-		Si monto >= 500 Entonces
-			j <- 0;
-			//Buscar en la lista SI HAY cajon/es con denominacion 500 y les resto la cantidad de billetes que le voy a entregar al usuario.
-			Repetir
-				Si den_cajon[j] = 500 Entonces
-					val1 <- trunc(monto / 500);
-					aux <- monto % 500;
-					monto <- aux;
-					cant_cajon[j] <- cant_cajon[j] - val1;
-					Escribir cant_cajon[j];
-				FinSi
-				j <- j + 1;
-			Hasta Que den_cajon[j - 1] = 500 O j = 5	
-			Escribir val1, " BILLETES DE 500.";
-		FinSi
-		//--------------------//
-		Si monto >= 100 Entonces
-			j <- 0;
-			//Buscar en la lista SI HAY cajon/es con denominacion 100 y les resto la cantidad de billetes que le voy a entregar al usuario.
-			Repetir
-				Si den_cajon[j] = 100 Entonces
-					val2 <- trunc(monto / 100);
-					aux <- monto % 100;
-					monto <- aux;
-					cant_cajon[j] <- cant_cajon[j] - val2;
-				FinSi
-				j <- j + 1;
-			Hasta Que den_cajon[j - 1] = 100 O j = 5
-			Escribir val2, " BILLETES DE 100.";
-		FinSi
-		//--------------------//
-		Si monto >= 50 Entonces
-			j <- 0;
-			//Buscar en la lista SI HAY cajon/es con denominacion 50 y les resto la cantidad de billetes que le voy a entregar al usuario.
-			Repetir
-				Si den_cajon[j] = 50 Entonces
-					val3 <- trunc(monto / 50);
-					aux <- monto % 50;
-					monto <- aux;
-					cant_cajon[j] <- cant_cajon[j] - val3;
-				FinSi
-				j <- j + 1;
-			Hasta Que den_cajon[j - 1] = 50 O j = 5
-			Escribir val3, " BILLETES DE 50.";
-		FinSi
-	FinSi
-	
-	Escribir "Extraccion exitosa!";
-	Escribir "Desea realizar otra extraccion...?[S/N]";
-	Leer rta;
-	Si rta = 's' o rta = 'S' Entonces
-		cls;
-		extraccion;
-	SiNo
-		Escribir "Hasta luego!";
-		cls;
-	FinSi
+	calculo_extraccion(monto,den_cajon,cant_cajon,rta);
 
 FinSubProceso
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -120,10 +57,99 @@ Funcion cant <- cant_billetes
 	cant <- azar(101);
 FinFuncion
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-SubProceso cls
-	Escribir "Pulse una tecla para continuar...";
-	Esperar Tecla;
+SubProceso cls(nro)
+	Esperar nro Segundos;
 	Limpiar Pantalla;
 FinSubProceso
-
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+SubProceso calculo_extraccion(monto,den_cajon,cant_cajon,rta)
+	Definir j,val1,val2,val3,aux Como Entero;
+	val1 <- 0;
+	val2 <- 0;
+	val3 <- 0;
+	Si (monto % 500 = 0) o (monto % 100 = 0) o (monto % 50 = 0) Entonces
+		Si rta = 'n' o rta = 'N' Entonces
+			extraccion;
+		SiNo
+			//--------------------//
+			Si monto >= 500 Entonces
+				j <- 0;
+				//Buscar en la lista SI HAY cajon/es con denominacion 500 y les resto la cantidad de billetes que le voy a entregar al usuario.
+				Repetir
+					Si den_cajon[j] = 500 Entonces
+						val1 <- trunc(monto / 500);
+						aux <- monto % 500;
+						monto <- aux;
+						Escribir "cantidad en el cajon de 500: ",cant_cajon[j];
+						Si val1 > cant_cajon[j] Entonces
+							
+						FinSi
+						cant_cajon[j] <- cant_cajon[j] - val1;
+						Escribir "cantidad ACTUAL en el cajon de 500: ",cant_cajon[j];
+					FinSi
+					j <- j + 1;
+				Hasta Que den_cajon[j - 1] = 500 O j = 5
+				Si val1 <> 0 Entonces 
+					Escribir val1, " BILLETES DE 500.";
+				FinSi
+			FinSi
+			//--------------------//
+			Si monto >= 100 Entonces
+				j <- 0;
+				//Buscar en la lista SI HAY cajon/es con denominacion 100 y les resto la cantidad de billetes que le voy a entregar al usuario.
+				Repetir
+					Si den_cajon[j] = 100 Entonces
+						val2 <- trunc(monto / 100);
+						aux <- monto % 100;
+						monto <- aux;
+						Escribir "cantidad en el cajon de 100: ",cant_cajon[j];
+						cant_cajon[j] <- cant_cajon[j] - val2;
+						Escribir "cantidad ACTUAL en el cajon de 100: ",cant_cajon[j];
+					FinSi
+					j <- j + 1;
+				Hasta Que den_cajon[j - 1] = 100 O j = 5
+				Si val2 <> 0 Entonces
+					Escribir val2, " BILLETES DE 100.";
+				FinSi
+			FinSi
+			//--------------------//
+			Si monto >= 50 Entonces
+				j <- 0;
+				//Buscar en la lista SI HAY cajon/es con denominacion 50 y les resto la cantidad de billetes que le voy a entregar al usuario.
+				Repetir
+					Si den_cajon[j] = 50 Entonces
+						val3 <- trunc(monto / 50);
+						aux <- monto % 50;
+						monto <- aux;
+						Escribir "cantidad en el cajon de 50: ",cant_cajon[j];
+						cant_cajon[j] <- cant_cajon[j] - val3;
+						Escribir "cantidad ACTUAL en el cajon de 500: ",cant_cajon[j];
+					FinSi
+					j <- j + 1;
+				Hasta Que den_cajon[j - 1] = 50 O j = 5
+				Si val3 <> 0 Entonces
+					Escribir val3, " BILLETES DE 50.";
+				FinSi
+			FinSi
+		FinSi
+	SiNo
+		Escribir "Unicas denominaciones de billetes disponibles: 500 / 100 / 50";
+		Escribir "Por favor ingrese un monto que pueda extraer con esos billetes..."; //No sabria como hacer el calcuclo para ofrecerle al usuario un valor cercano al ingresado que sea divisible por 500/100/50.
+		cls(3);
+		extraccion;
+	FinSi
+	
+	Escribir "Extraccion exitosa!";
+	Escribir "Desea realizar otra extraccion...?[S/N]";
+	Leer rta;
+	Si rta = 's' o rta = 'S' Entonces
+		cls(1);
+		extraccion;
+	SiNo
+		cls(1);
+		Escribir "Hasta luego!";
+		cls(1);
+	FinSi
+	
+FinSubProceso
 
