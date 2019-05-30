@@ -1,4 +1,6 @@
-Algoritmo numerodemes
+Algoritmo nroDeMes
+	Escribir "NUMERO DE MES.";
+	Escribir "";
 	Escribir "Ingrese un numero de mes.";
 	Leer a;
 	Si a = 1 Entonces

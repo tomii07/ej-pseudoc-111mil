@@ -1,4 +1,7 @@
 Proceso Triangulo
+	Escribir "CLASIFICACION DE UN TRIANGULO:";
+	Escribir "Equilatero - Escaleno - Isoceles";
+	Escribir "";
 	Escribir "Ingrese un numero";
 	Leer a;
 	Escribir "Ingrese un numero";

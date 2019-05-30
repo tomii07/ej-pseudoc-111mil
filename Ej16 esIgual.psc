@@ -8,7 +8,7 @@ Proceso esIgual
 	Si nro1 = nro2 Entonces
 		Escribir "Son iguales!";
 	SiNo 
-		Escribir "Son distintos..."
+		Escribir "Son distintos...";
 	FinSi
 	
 FinProceso

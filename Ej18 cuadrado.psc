@@ -5,6 +5,8 @@ Proceso cuadrado
 	Definir aux Como Entero;
 	Definir shape Como Caracter;
 	
+	Escribir "PROGRAMA DEL CUADRADO!";
+	Escribir "";
 	//Pido datos
 	Escribir "Ingrese alto: ";
 	Leer h;
@@ -12,7 +14,7 @@ Proceso cuadrado
 	Leer b;
 	
 	aux <- b;
-	shape <- '#';
+	shape <- ' #';
 	
 	//Condiciones para que no sea valido
 	Si h < 1 O b < 1 Entonces
@@ -24,7 +26,7 @@ Proceso cuadrado
 			//Quiero que el valor de b se me resetee
 			b <- aux;
 			Repetir
-				Escribir Sin Saltar " ",shape;
+				Escribir Sin Saltar shape;
 				b <- b - 1;
 			Hasta Que b = 0;
 			Escribir "";

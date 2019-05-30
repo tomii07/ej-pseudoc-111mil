@@ -3,6 +3,8 @@ Proceso bordeCuadrado
 	Definir h,w,h2,w2,aux1,aux2,aux3 Como Entero;
 	Definir sh1,sh2,sh3 Como Caracter;
 	
+	Escribir "PROGRAMA DEL BORDE DE UN CUADRADO!";
+	Escribir "";
 	Escribir "Ingrese alto: ";
 	Leer h;
 	Escribir "Ingrese ancho: ";
