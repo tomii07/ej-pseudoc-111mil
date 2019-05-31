@@ -10,7 +10,8 @@ SubProceso extraccion
 	Dimension cant_cajon[5];
 	Dimension den_cajon[5];
 	i <- 0;
-	Repetir //Cargando la cantidad de billetes que va a haber en el cajon con su denominacion correspondiente.
+	Repetir 
+		//Cargando la cantidad de billetes que va a haber en el cajon con su denominacion correspondiente.
 		//Al tener una lista con 5 cajones y otra lista con 5 denominaciones no tuve en cuenta el orden en que se van a dar 
 		//la cantidad de billetes por cajon. 
 		//Directamente estableci que cada cajon va a tener una cierta cantidad independientemente de su respectiva denominacion.
@@ -78,18 +79,19 @@ SubProceso calculo_extraccion(monto,den_cajon,cant_cajon,rta)
 				Repetir
 					Si den_cajon[j] = 500 Entonces
 						val1 <- trunc(monto / 500);
-						aux <- monto % 500;
-						monto <- aux;
 						Escribir "cantidad en el cajon de 500: ",cant_cajon[j];
-						Si val1 > cant_cajon[j] Entonces
-							
+						Si val1 < cant_cajon[j] Entonces
+							aux <- monto % 500;
+							monto <- aux;
+							cant_cajon[j] <- cant_cajon[j] - val1;
+						SiNo
+							val1 <- 0;
 						FinSi
-						cant_cajon[j] <- cant_cajon[j] - val1;
 						Escribir "cantidad ACTUAL en el cajon de 500: ",cant_cajon[j];
 					FinSi
 					j <- j + 1;
 				Hasta Que den_cajon[j - 1] = 500 O j = 5
-				Si val1 <> 0 Entonces 
+				Si val1 > 0 Entonces 
 					Escribir val1, " BILLETES DE 500.";
 				FinSi
 			FinSi
@@ -100,15 +102,19 @@ SubProceso calculo_extraccion(monto,den_cajon,cant_cajon,rta)
 				Repetir
 					Si den_cajon[j] = 100 Entonces
 						val2 <- trunc(monto / 100);
-						aux <- monto % 100;
-						monto <- aux;
 						Escribir "cantidad en el cajon de 100: ",cant_cajon[j];
-						cant_cajon[j] <- cant_cajon[j] - val2;
+						Si val2 < cant_cajon[j] Entonces
+							aux <- monto % 100;
+							monto <- aux;
+							cant_cajon[j] <- cant_cajon[j] - val2;
+						SiNo
+							val2 <- 0;
+						FinSi
 						Escribir "cantidad ACTUAL en el cajon de 100: ",cant_cajon[j];
 					FinSi
 					j <- j + 1;
 				Hasta Que den_cajon[j - 1] = 100 O j = 5
-				Si val2 <> 0 Entonces
+				Si val2 > 0 Entonces
 					Escribir val2, " BILLETES DE 100.";
 				FinSi
 			FinSi
@@ -119,15 +125,19 @@ SubProceso calculo_extraccion(monto,den_cajon,cant_cajon,rta)
 				Repetir
 					Si den_cajon[j] = 50 Entonces
 						val3 <- trunc(monto / 50);
-						aux <- monto % 50;
-						monto <- aux;
 						Escribir "cantidad en el cajon de 50: ",cant_cajon[j];
-						cant_cajon[j] <- cant_cajon[j] - val3;
+						Si val3 < cant_cajon[j] Entonces
+							aux <- monto % 50;
+							monto <- aux;
+							cant_cajon[j] <- cant_cajon[j] - val3;
+						SiNo
+							val3 <- 0;
+						FinSi
 						Escribir "cantidad ACTUAL en el cajon de 500: ",cant_cajon[j];
 					FinSi
 					j <- j + 1;
 				Hasta Que den_cajon[j - 1] = 50 O j = 5
-				Si val3 <> 0 Entonces
+				Si val3 > 0 Entonces
 					Escribir val3, " BILLETES DE 50.";
 				FinSi
 			FinSi
