@@ -10,7 +10,8 @@ Proceso invertir
 	mostrar(lista,i,tam);
 	Escribir "";
 	Escribir "LISTA INVERTIDA: "; 
-	mostrar_invertida(lista,tam);
+	i <- tam - 1;
+	mostrar_invertida(lista,i);
 FinProceso
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 Funcion cargar_lista(lista,i,tam)
@@ -31,13 +32,11 @@ Funcion mostrar(lista,i,tam)
 	Escribir "";
 FinFuncion
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-Funcion mostrar_invertida(lista,tam)
-	Definir i Como Entero;
-	i <- tam - 1;
-	Repetir
+Funcion mostrar_invertida(lista,i)
+	Si i >= 0 Entonces
 		Escribir "[",lista[i],"]" Sin Saltar;
-		i <- i - 1;
-	Hasta Que i < 0
-	Escribir "";
+		mostrar_invertida(lista,i - 1);
+		Escribir "";
+	FinSi
 FinFuncion
 	
