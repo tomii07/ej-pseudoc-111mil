@@ -1,37 +1,34 @@
 Proceso circulo
 	
-	Definir d Como Entero;
+	Definir r Como Entero;
 	
-	Escribir "Ingrese diametro: ";
-	Leer d;
+	Escribir "Ingrese radio: ";
+	Leer r;
 	
-	circle_constructor(d);
+	circle_constructor(r);
 	
 FinProceso
 
-SubProceso circle_constructor(d)
+SubProceso circle_constructor(r)
 	
 	Definir i,j como Entero;
-	Definir aux Como Real;
 	
-	aux <- trunc(d/2);
-	Escribir aux;
+	j <- r;
+	i <- -r;
 	
-	Para j <- aux Hasta -aux Con Paso -1 Hacer
-		Para i <- -aux Hasta aux Con Paso 1 Hacer
-			Escribir "(",i,",",j,"): " Sin Saltar;
-			Si (i*i) + (j*j) <= d Entonces
-				Escribir '#' Sin Saltar;
-				Si i = aux Entonces
-					Escribir "";
-				FinSi
+	Mientras j >= -r Hacer
+		Mientras i <= r Hacer
+			Si (i*i)+ (j*j) < (r*r) Entonces
+				Escribir "#" Sin Saltar;
 			SiNo
 				Escribir " " Sin Saltar;
-				Si i = aux Entonces
-					Escribir "";	
-				FinSi
 			FinSi
-		FinPara
-	FinPara
+			i <- i + 1;
+		FinMientras
+		Escribir " ";
+		j <- j - 1;
+		i <- -r;
+	FinMientras
+	
 
 FinSubProceso
